@@ -4,7 +4,7 @@ const MainLayout = () => {
 
 
     return (
-        <div>
+        <div className="w-full flex flex-col items-center ">
             <Outlet />
         </div>
     )

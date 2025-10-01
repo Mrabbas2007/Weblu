@@ -1,14 +1,37 @@
 @import "tailwindcss";
 
-* {
-  margin: 0;
-  padding: 0;
+
+@font-face {
+  font-family: 'YekanBlack';
+  src: url('@assets/fonts/IRANYekanWebBlack.woff2') format('woff2'),
+       url('@assets/fonts/IRANYekanWebBlack.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
+@font-face {
+  font-family: 'YekanMedium';
+  src: url('@assets/fonts/IRANYekanWebMedium.woff2') format('woff2'),
+       url('@assets/fonts/IRANYekanWebMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 body {
   width: 100%;
-  height: 100vh;
+  font-family: 'YekanMedium', sans-serif;
   position: relative;
+  direction: rtl;
 }
+
+.YekanBlack {
+  font-family: 'YekanBlack', sans-serif;
+}
+
+.lrt {
+  direction: ltr;
+}
+
 
