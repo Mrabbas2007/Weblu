@@ -15,10 +15,15 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@components": path.resolve(__dirname, "src/components"),
-      "@hooks": path.resolve(__dirname, "src/hooks"),
-      "@pages": path.resolve(__dirname, "src/pages"),
-      "@assets": path.resolve(__dirname, "src/assets")
-    },
+      "@assets": path.resolve(__dirname, "./src/assets"),
+      "@components": path.resolve(__dirname, "./src/components"),
+      "@features": path.resolve(__dirname, "./src/features"),
+      "@hooks": path.resolve(__dirname, "./src/hooks"),
+      "@layouts": path.resolve(__dirname, "./src/layouts"),
+      "@pages": path.resolve(__dirname, "./src/pages"),
+      "@routes": path.resolve(__dirname, "./src/routes"),
+      "@service": path.resolve(__dirname, "./src/service"),
+      "@types": path.resolve(__dirname, "./src/types")
+    }
   },
 });

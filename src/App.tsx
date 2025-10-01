@@ -1,17 +1,10 @@
-import { lazy, Suspense } from 'react'
-import './App.css'
+import { AppRoutes } from "@routes/index"
 
 const App = () => {
 
-  const HpmePage = lazy(() => import('./pages/Home'))
-
   return (
     <>
-      <main className='w-full '>
-        <Suspense fallback={''} >
-          <HpmePage />
-        </Suspense>
-      </main>
+      <AppRoutes />
     </>
   )
 }
