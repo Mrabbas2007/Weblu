@@ -50,7 +50,7 @@ const Header = () => {
 
                 {/* CTA Buttons - Desktop */}
                 <div className="w-1/3 hidden md:flex items-center justify-end gap-4">
-                    <button className="py-2 px-4 rounded-lg border-2 border-white hover:bg-white hover:text-purple-700 transition">
+                    <button className="py-2 px-4 rounded-lg border-2 border-white hover:bg-white hover:text-blue-700 transition">
                         شروع پروژه
                     </button>
                     <button className="py-2 px-4 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition">

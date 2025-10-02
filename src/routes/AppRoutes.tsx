@@ -7,6 +7,7 @@ const AppRoutes: React.FC = () => (
     <Routes>
         <Route element={<MainLayout />}>
             <Route path="/" element={<Home />} />
+            <Route path="*" element={"404"} />
         </Route>
     </Routes>
 )
