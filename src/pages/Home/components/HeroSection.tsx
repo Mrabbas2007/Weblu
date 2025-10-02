@@ -5,7 +5,7 @@ const HeroSection = () => {
 
 
     return (
-        <div className="w-[90%] h-[80vh] mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-4 py-4">
+        <div className="w-[90%] md:h-[80vh] h-screen mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-4 py-4">
             {/* Text Section */}
             <div className="flex-1 flex justify-start items-center px-4">
                 <div className="max-w-3xl space-y-6">
@@ -29,7 +29,7 @@ const HeroSection = () => {
             </div>
 
             {/* Image Section */}
-            <div className="flex-1 flex justify-center md:justify-end px-4">
+            <div className="flex-1 flex justify-center md:justify-end px-4 max-md:mt-14">
                 <img
                     src={woman}
                     alt="طراحی سایت وبلو"
