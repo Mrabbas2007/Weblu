@@ -3,7 +3,7 @@ import { Fade } from "@components/Effects"
 const HeroSection = () => {
 
     return (
-        <div className="w-[90%] md:h-[80vh] h-screen mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-4 py-4">
+        <div className="w-[90%] md:h-[90vh] h-screen mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-4 py-4">
             {/* Text Section */}
             <div className="flex-1 flex justify-start items-center px-4">
                 <div className="max-w-3xl space-y-6">

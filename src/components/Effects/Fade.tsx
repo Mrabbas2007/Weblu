@@ -1,8 +1,8 @@
+import * as React from "react";
 import { motion, useInView } from "framer-motion";
 import type { Variants } from "framer-motion";
-import * as React from "react";
 
-type TextFadeProps = {
+type FadeProps = {
   direction?: "up" | "down" | "left" | "right";
   children: React.ReactNode;
   className?: string;
@@ -15,25 +15,24 @@ export default function Fade({
   direction = "up",
   children,
   className = "",
-  staggerChildren = 0.1,
+  staggerChildren = 0.08,
   delay = 0,
   once = true,
-}: TextFadeProps) {
+}: FadeProps) {
   const ref = React.useRef<HTMLDivElement | null>(null);
   const isInView = useInView(ref, { once });
 
   const distance = 24;
-
   const offset =
     direction === "up"
       ? distance
       : direction === "down"
-      ? -distance
-      : direction === "left"
-      ? distance
-      : -distance;
+        ? -distance
+        : direction === "left"
+          ? distance
+          : -distance;
 
-  const fadeVariant: Variants = {
+  const childVariant: Variants = {
     hidden: {
       opacity: 0,
       x: direction === "left" || direction === "right" ? offset : 0,
@@ -43,15 +42,21 @@ export default function Fade({
       opacity: 1,
       x: 0,
       y: 0,
-      transition: { type: "spring", duration: 0.8, delay },
+      transition: {
+        type: "spring",
+        stiffness: 140,
+        damping: 20,
+        duration: 0.6,
+      },
     },
   };
 
-  const containerVariants: Variants = {
+  const containerVariant: Variants = {
     hidden: {},
     show: {
       transition: {
         staggerChildren: staggerChildren,
+        delayChildren: delay,
       },
     },
   };
@@ -59,14 +64,15 @@ export default function Fade({
   return (
     <motion.div
       ref={ref}
+      variants={containerVariant}
       initial="hidden"
       animate={isInView ? "show" : "hidden"}
-      variants={containerVariants}
       className={className}
     >
       {React.Children.map(children, (child) =>
         React.isValidElement(child) ? (
-          <motion.div variants={fadeVariant}>{child}</motion.div>
+          // each child uses the childVariant and inherits parent's initial/animate
+          <motion.div variants={childVariant}>{child}</motion.div>
         ) : (
           child
         )

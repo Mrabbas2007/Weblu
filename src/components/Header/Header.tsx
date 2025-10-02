@@ -33,24 +33,24 @@ const Header = () => {
 
 
     return (
-        <header className="w-full bg-transparent fixed top-0 left-0 z-50">
-            <div className={`${scrolled ? "backdrop-blur-lg rounded-xl shadow-lg mt-2 w-[90%]" : "bg-transparent w-full"} duration-300
-             container  mx-auto flex items-center justify-between p-4`}>
+        <header className={`w-full bg-transparent fixed top-0 left-0 z-50 flex items-center ${scrolled && 'p-4 max-md:p-2'} duration-300`}>
+            <div className={`${scrolled ? "backdrop-blur-lg rounded-xl shadow-lg" : "bg-transparent"} duration-300
+              flex items-center justify-between py-4 px-4 max-md:py-2 w-full`}>
                 {/* Logo */}
-                <div className="w-1/3 flex justify-start items-center">
+                <div className="lg:w-1/3 flex justify-start items-center">
                     <img src={logo} alt="وبلو" className="h-12" />
                     <h2 className="text-xl text-zinc-800 YekanBlack">  وبلو </h2>
                 </div>
 
                 {/* Navigation Links - Desktop */}
-                <nav className="w-1/3 hidden md:flex justify-center items-center gap-8  font-medium">
+                <nav className="lg:w-1/3 hidden md:flex justify-center items-center gap-8  font-medium">
                     {menu.map((i, idx) => (
                         <Link key={idx} to={`/${i.key}`} className="hover:text-blue-500 duration-200 "> {i.name} </Link>
                     ))}
                 </nav>
 
                 {/* CTA Buttons - Desktop */}
-                <div className="w-1/3 hidden md:flex items-center justify-end gap-4">
+                <div className="lg:w-1/3 hidden md:flex items-center justify-end gap-4">
                     <button className="py-2 px-4 flex gap-2 rounded-lg border-2 border-white hover:bg-white hover:text-blue-700 transition">
                         شروع پروژه
                         <AddSquar />
