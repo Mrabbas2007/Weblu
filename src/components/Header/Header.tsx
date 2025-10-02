@@ -1,4 +1,5 @@
 import { logo } from "@assets/images";
+import { AddSquar, CallIcon } from "@components/Icons";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -50,11 +51,13 @@ const Header = () => {
 
                 {/* CTA Buttons - Desktop */}
                 <div className="w-1/3 hidden md:flex items-center justify-end gap-4">
-                    <button className="py-2 px-4 rounded-lg border-2 border-white hover:bg-white hover:text-blue-700 transition">
+                    <button className="py-2 px-4 flex gap-2 rounded-lg border-2 border-white hover:bg-white hover:text-blue-700 transition">
                         شروع پروژه
+                        <AddSquar />
                     </button>
-                    <button className="py-2 px-4 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition">
+                    <button className="py-2 px-4 flex gap-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition">
                         مشاوره رایگان
+                        <CallIcon className="text-white"/>
                     </button>
                 </div>
 
