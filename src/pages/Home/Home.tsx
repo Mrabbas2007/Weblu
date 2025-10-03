@@ -1,4 +1,4 @@
-import { HeroSection, Service, FeedbackCarousel } from "./components";
+import { HeroSection, Service, FeedbackCarousel, Portfolio,  } from "./components";
 
 const Home = () => {
 
@@ -12,6 +12,9 @@ const Home = () => {
             </div>
             <div>
                 <FeedbackCarousel />
+            </div>
+            <div>
+                <Portfolio />
             </div>
         </div>
     );
