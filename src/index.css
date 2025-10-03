@@ -4,7 +4,7 @@
 @font-face {
   font-family: 'YekanBlack';
   src: url('@assets/fonts/IRANYekanWebBlack.woff2') format('woff2'),
-       url('@assets/fonts/IRANYekanWebBlack.woff') format('woff');
+    url('@assets/fonts/IRANYekanWebBlack.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -13,7 +13,7 @@
 @font-face {
   font-family: 'YekanMedium';
   src: url('@assets/fonts/IRANYekanWebMedium.woff2') format('woff2'),
-       url('@assets/fonts/IRANYekanWebMedium.woff') format('woff');
+    url('@assets/fonts/IRANYekanWebMedium.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -32,6 +32,10 @@ body {
 
 .lrt {
   direction: ltr;
+}
+
+.corner-shape {
+  clip-path: inset(0 round 40%);
 }
 
 :root {
