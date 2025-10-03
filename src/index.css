@@ -34,4 +34,59 @@ body {
   direction: ltr;
 }
 
+:root {
+  --scrollbar-foreground: rgb(0, 140, 255);
+  --scrollbar-foreground-hover: rgb(0, 100, 200);
+  --scrollbar-foreground-active: rgb(0, 80, 180);
+  --scrollbar-background: transparent;
+  --scrollbar-background-hover: rgba(0, 0, 0, 0.02);
+  --scrollbar-size: 12px;
+  --scrollbar-border-size: 3px;
+}
 
+/* WebKit Scrollbars */
+::-webkit-scrollbar {
+  width: var(--scrollbar-size);
+  height: var(--scrollbar-size);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-foreground);
+  border-radius: calc(var(--scrollbar-size) / 2);
+  border: var(--scrollbar-border-size) solid transparent;
+  background-clip: padding-box;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-foreground-hover);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--scrollbar-foreground-active);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-background);
+  border-radius: calc(var(--scrollbar-size) / 2);
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: var(--scrollbar-background-hover);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-foreground) var(--scrollbar-background);
+}
+
+/* Optional: Hide scrollbar until hover */
+.scrollbar-hide-until-hover::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.scrollbar-hide-until-hover:hover::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-foreground);
+}
