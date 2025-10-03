@@ -1,4 +1,4 @@
-import { HeroSection, Service, FeedbackCarousel, Portfolio,  } from "./components";
+import { HeroSection, Service, FeedbackCarousel, Portfolio, WhyUs } from "./components";
 
 const Home = () => {
 
@@ -15,6 +15,9 @@ const Home = () => {
             </div>
             <div>
                 <Portfolio />
+            </div>
+            <div>
+                <WhyUs />
             </div>
         </div>
     );
