@@ -4,10 +4,10 @@ interface IIcon {
 }
 
 const Logo = ({ className = "" }: { className?: string }) => (
-  <svg className={className} width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
-    <rect width="24" height="24" rx="6" fill="#696FC7" />
-    <path d="M7 13L10 9L14 15L17 11" stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
-  </svg>
+    <svg className={className} width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+        <rect width="24" height="24" rx="6" fill="#696FC7" />
+        <path d="M7 13L10 9L14 15L17 11" stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
 );
 
 const PaintBoard = ({ size = 24, className }: IIcon) => (
@@ -60,6 +60,13 @@ const UsersGroup = ({ size = 24, className }: IIcon) => (
         <path d="M3.22596 18C2.47666 18 1.88067 17.5285 1.34555 16.8691C0.250089 15.5194 2.04867 14.4408 2.73465 13.9126C3.43197 13.3756 4.21058 13.0714 5 13M5.5 11C4.11929 11 3 9.88071 3 8.5C3 7.11929 4.11929 6 5.5 6" strokeWidth="1.5" strokeLinecap="round" />
         <path d="M8.0838 15.1112C7.06203 15.743 4.38299 17.0331 6.0147 18.6474C6.81178 19.436 7.69952 20 8.81563 20H15.1844C16.3005 20 17.1882 19.436 17.9853 18.6474C19.617 17.0331 16.938 15.743 15.9162 15.1112C13.5201 13.6296 10.4799 13.6296 8.0838 15.1112Z" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         <path d="M15.5 7.5C15.5 9.433 13.933 11 12 11C10.067 11 8.5 9.433 8.5 7.5C8.5 5.567 10.067 4 12 4C13.933 4 15.5 5.567 15.5 7.5Z" strokeWidth="1.5" />
+    </svg>
+);
+
+const User = ({ size = 24, className }: IIcon) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" className={className}>
+        <path d="M6.57757 15.4816C5.1628 16.324 1.45336 18.0441 3.71266 20.1966C4.81631 21.248 6.04549 22 7.59087 22H16.4091C17.9545 22 19.1837 21.248 20.2873 20.1966C22.5466 18.0441 18.8372 16.324 17.4224 15.4816C14.1048 13.5061 9.89519 13.5061 6.57757 15.4816Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M16.5 6.5C16.5 8.98528 14.4853 11 12 11C9.51472 11 7.5 8.98528 7.5 6.5C7.5 4.01472 9.51472 2 12 2C14.4853 2 16.5 4.01472 16.5 6.5Z" stroke-width="1.5" />
     </svg>
 );
 
@@ -124,6 +131,6 @@ const TelegramIcon = ({ size = 24, className }: IIcon) => (
 )
 
 export {
-    Logo, PaintBoard, CodeSquar, Wordpress, ShopingCart, IdeaIcon, UsersGroup, CustomerService, Computer, AddSquar, CallIcon,
+    Logo, PaintBoard, CodeSquar, Wordpress, ShopingCart, IdeaIcon, User, UsersGroup, CustomerService, Computer, AddSquar, CallIcon,
     ArrowLeft, ArrowRight, InstagramIcon, TelegramIcon
 }

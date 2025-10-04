@@ -44,8 +44,8 @@ body {
   --scrollbar-foreground-active: rgb(0, 80, 180);
   --scrollbar-background: transparent;
   --scrollbar-background-hover: rgba(0, 0, 0, 0.02);
-  --scrollbar-size: 12px;
-  --scrollbar-border-size: 3px;
+  --scrollbar-size: 10px;
+  --scrollbar-border-size: 2px;
 }
 
 /* WebKit Scrollbars */
@@ -86,7 +86,7 @@ body {
   scrollbar-color: var(--scrollbar-foreground) var(--scrollbar-background);
 }
 
-/* Optional: Hide scrollbar until hover */
+/* Hide scrollbar until hover */
 .scrollbar-hide-until-hover::-webkit-scrollbar-thumb {
   background: transparent;
 }
