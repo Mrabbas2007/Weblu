@@ -12,7 +12,8 @@ const AppRoutes: React.FC = () => (
         </Route>
 
         <Route element={<BlankLayout />} >
-            <Route path="/register" element={<AuthPage />} />
+            <Route path="/register" element={<AuthPage type="register" />} />
+            <Route path="/login" element={<AuthPage type="login" />} />
         </Route>
     </Routes>
 )

@@ -34,7 +34,7 @@ const sampleProjects = [
 const Portfolio = () => {
 
     return (
-        <div className="container mx-auto py-4 flex flex-col justify-center items-center gap-8 mt-28 ">
+        <div className="container max-md:w-[90%] mx-auto py-4 flex flex-col justify-center items-center gap-8 mt-28 ">
             <Fade direction="down" >
                 <h2 className="text-3xl font-semibold "> نمونه کارهای اخیر ما </h2>
             </Fade>

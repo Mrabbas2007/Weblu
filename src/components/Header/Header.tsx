@@ -51,15 +51,21 @@ const Header = () => {
 
                 {/* CTA Buttons - Desktop */}
                 <div className="lg:w-1/3 hidden md:flex items-center justify-end gap-4">
-                    <Link to={``}>
-                        <button className="py-2 px-4 flex gap-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition">
+                    {/* Start Project Button */}
+                    <Link to="">
+                        <button className="cursor-pointer py-2 px-4 flex gap-2 rounded-lg border border-blue-500/60 text-blue-600 
+                        bg-white/10 backdrop-blur-md hover:bg-blue-600 hover:text-white hover:shadow-[0_0_20px_rgba(37,99,235,0.4)]
+                        transition-all duration-300">
                             شروع پروژه
                             <AddSquar />
                         </button>
                     </Link>
-                    <Link to={`/register`} >
-                        <button className="py-2 px-4 flex gap-2 rounded-lg border-2 border-zinc-600 hover:border-blue-500
-                        hover:text-blue-700 transition text-zinc-600">
+
+                    {/* Register/Login Button */}
+                    <Link to="/register">
+                        <button className="cursor-pointer py-2 px-4 flex gap-2 rounded-lg border border-zinc-500/60 text-zinc-700 
+                        bg-white/10 backdrop-blur-md hover:border-blue-500 hover:text-blue-700 hover:shadow-[0_0_20px_rgba(37,99,235,0.3)]
+                        transition-all duration-300">
                             ثبت نام / ورود
                             <User />
                         </button>
